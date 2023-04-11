@@ -1,0 +1,59 @@
+.carte-sort {
+    box-sizing: border-box;
+    width: 450px;
+    font-size: 0.80rem;
+    text-align: left;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px 20px;
+    line-height: 1.5;
+
+    background: whitesmoke url("../assets/img/fond-carte.jpg") repeat;
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 200ms all;
+}
+
+.carte-nom {
+    margin: 0;
+    letter-spacing: 1px;
+    color: #6D0000;
+}
+
+.carte-titre {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carte-favoris {
+    color: #6D0000;
+}
+
+.carte-favoris:hover {
+    cursor: pointer;
+}
+
+.carte-ecole {
+    margin-top: -4px;
+    padding-bottom: 8px;
+}
+
+.carte-description {
+    text-align: justify;
+    padding-top: 4px;
+}
+
+.carte-liste-classe {
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.carte-classe {
+    background-color: #6D0000;
+    color: white;
+    padding: 1px 10px;
+    border-radius: 4px;
+}
+

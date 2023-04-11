@@ -1,0 +1,23 @@
+.entete-recherche {
+    height: 100px;
+    background-color: black;
+    padding: 20px;
+}
+
+.entete-recherche h1 {
+    color: white;
+    margin-top: 0px;
+}
+
+.liste-sort {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.titre-page {
+    font-size: 3em;
+    margin-bottom: 5px;
+}

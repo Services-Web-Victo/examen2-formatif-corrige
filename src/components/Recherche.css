@@ -1,0 +1,10 @@
+#form-recherche {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+#niveau {
+    width: 50px;
+}
