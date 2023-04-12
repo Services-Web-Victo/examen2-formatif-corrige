@@ -12,12 +12,11 @@ class Carte extends React.Component {
     changeFavori = (e) => {
         const estFavoris = e.target.getAttribute("data-favoris");
 
-        // TODO : Ajouter la modification à la base de données
         if(estFavoris === "1") {
-            this.setState({sortFavori : 0});
+            this.setState({sortFavori : "0"});
             this.props.supprimerFavori(this.props.sort.id);
         } else {
-            this.setState({sortFavori : 1});
+            this.setState({sortFavori : "1"});
             this.props.ajouterFavori(this.props.sort.id);
         }
     }
@@ -25,15 +24,16 @@ class Carte extends React.Component {
     render() {
 
         let iconeFavori = <i className="far fa-heart fa-2x carte-favoris" data-favoris="0" onClick={this.changeFavori}></i>;
-        if (this.state.sortFavori === 1){
+        if (this.state.sortFavori === "1"){
             iconeFavori = <i className="fas fa-heart fa-2x carte-favoris" data-favoris="1" onClick={this.changeFavori}></i>
         }
-        // TODO : Déterminer les valeurs de la ligne composantes (V,S,M)
+        
         const sort = this.props.sort;
-        let composantes = sort.verbal === 1 ? "V" : "";
-        composantes += sort.somatic === 1 ? ", S" : "";
-        composantes += sort.material === 1 ? ", M" : "";
+        let composantes = sort.verbal === "1" ? "V, " : "";
+        composantes += sort.somatic === "1" ? "S, " : "";
+        composantes += sort.material === "1" ? "M" : "";
         composantes += sort.material_cost !== "" ? " (" + sort.material_cost + ")" : "";
+        composantes = composantes.substring(composantes.length-2) === ", " ? composantes.substring(0, composantes.length-2) : composantes;
 
         const listeClasses = sort.classe.split(",");
         const listeBoutonClasses = listeClasses.map((classe) => {
